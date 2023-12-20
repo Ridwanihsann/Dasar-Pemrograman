@@ -5,15 +5,15 @@ import java.time.LocalDate;
 public class Peminjaman {
     private String idPeminjaman;
     private Buku buku;
-    private Anggota anggota;
+    private Mahasiswa mahasiswa;
     private LocalDate tanggalPinjam;
     private LocalDate tanggalKembali;
     private boolean sudahDikembalikan;
 
-    public Peminjaman(String idPeminjaman, Buku buku, Anggota anggota) {
+    public Peminjaman(String idPeminjaman, Buku buku, Mahasiswa mahasiswa) {
         this.idPeminjaman = idPeminjaman;
         this.buku = buku;
-        this.anggota = anggota;
+        this.mahasiswa = mahasiswa;
         this.tanggalPinjam = LocalDate.now();
         this.sudahDikembalikan = false;
     }
@@ -34,12 +34,12 @@ public class Peminjaman {
         this.buku = buku;
     }
 
-    public Anggota getAnggota() {
-        return anggota;
+    public Mahasiswa getMahasiswa() {
+        return mahasiswa;
     }
 
-    public void setAnggota(Anggota anggota) {
-        this.anggota = anggota;
+    public void setMahasiswa(Mahasiswa mahasiswa) {
+        this.mahasiswa = mahasiswa;
     }
 
     public LocalDate getTanggalPinjam() {
@@ -79,7 +79,7 @@ public class Peminjaman {
     // public void setBuku(Buku buku) {
     //     this.buku = buku;
     // }
-    // public void setAnggota(Anggota anggota) {
+    // public void setAnggota(Mahasiswa mahasiswa) {
     //     this.anggota = anggota;
     // }
     // public void setTanggalPinjam(LocalDate tanggalPinjam) {
@@ -99,7 +99,7 @@ public class Peminjaman {
     // public Buku getBuku() {
     //     return buku;
     // }
-    // public Anggota getAnggota() {
+    // public Mahasiswa getAnggota() {
     //     return anggota;
     // }
     // public LocalDate getTanggalPinjam() {
