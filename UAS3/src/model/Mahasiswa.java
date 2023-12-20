@@ -4,7 +4,7 @@ public class Mahasiswa {
     private String idMahasiswa;
     private String nama;
     private String email;
-    private boolean tersedia;
+    private boolean terdaftar;
 
     public Mahasiswa setIdMahasiswa(String idMahasiswa) {
         this.idMahasiswa = idMahasiswa;
@@ -18,8 +18,8 @@ public class Mahasiswa {
         this.email = email;
         return this;
     }
-    public Mahasiswa setTersedia(boolean tersedia) {
-        this.tersedia = tersedia;
+    public Mahasiswa setTerdaftar(boolean terdaftar) {
+        this.terdaftar = terdaftar;
         return this;
     }
 
@@ -33,8 +33,8 @@ public class Mahasiswa {
     public String getEmail() {
         return email;
     }
-    public boolean isTersedia() {
-        return tersedia;
+    public boolean isTerdaftar() {
+        return terdaftar;
     }
 
 }

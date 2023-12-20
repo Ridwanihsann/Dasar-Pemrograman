@@ -73,23 +73,43 @@ public class Peminjaman {
 
 
 
-    // public void setIdPeminjaman(String idPeminjaman) {
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    // public Peminjaman setIdPeminjaman(String idPeminjaman) {
     //     this.idPeminjaman = idPeminjaman;
+    //     return this;
     // }
-    // public void setBuku(Buku buku) {
+    // public Peminjaman setBuku(Buku buku) {
     //     this.buku = buku;
+    //     return this;
     // }
-    // public void setAnggota(Mahasiswa mahasiswa) {
-    //     this.anggota = anggota;
+    // public Peminjaman setMahasiswa(Mahasiswa mahasiswa) {
+    //     this.mahasiswa = mahasiswa;
+    //     return this;
     // }
-    // public void setTanggalPinjam(LocalDate tanggalPinjam) {
+    // public Peminjaman setTanggalPinjam(LocalDate tanggalPinjam) {
     //     this.tanggalPinjam = tanggalPinjam;
+    //     return this;
     // }
-    // public void setTanggalKembali(LocalDate tanggalKembali) {
+    // public Peminjaman setTanggalKembali(LocalDate tanggalKembali) {
     //     this.tanggalKembali = tanggalKembali;
+    //     return this;
     // }
-    // public void setSudahDikembalikan(boolean sudahDikembalikan) {
+    // public Peminjaman setSudahDikembalikan(boolean sudahDikembalikan) {
     //     this.sudahDikembalikan = sudahDikembalikan;
+    //     return this;
     // }
 
 
@@ -99,8 +119,8 @@ public class Peminjaman {
     // public Buku getBuku() {
     //     return buku;
     // }
-    // public Mahasiswa getAnggota() {
-    //     return anggota;
+    // public Mahasiswa getMahasiswa() {
+    //     return mahasiswa;
     // }
     // public LocalDate getTanggalPinjam() {
     //     return tanggalPinjam;

@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
 
 import controller.PerpustakaanController;
 import model.Mahasiswa;
@@ -8,10 +6,8 @@ import model.Buku;
 
 public class App {
 
-    // private static final Scanner Scanner = null;
 
-
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         System.out.println("\n=========== SELAMAT DATANG ===========\n");
         System.out.println("---- Perpustakaan Peminjaman Buku ----\n");
 
@@ -29,6 +25,7 @@ public class App {
                     break;
                 case "2" :
                     perpustakaanController.tampilkanDaftarMahasiswa();
+                    break;
                 case "3":
                     perpustakaanController.menuPinjamBuku();
                     break;
@@ -46,9 +43,6 @@ public class App {
                     break;
             }
         }
-
-        System.out.println("Sampai Jumpa");
-
     }
 
 
