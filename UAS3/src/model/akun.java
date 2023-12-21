@@ -1,17 +1,19 @@
 package model;
 
 public class akun {
-    private String name;
+    private String nama;
     private String email;
+    private boolean terdaftar;
     
 
-    public akun setName(String name) {
-        this.name = name;
+
+    public akun setNama(String nama) {
+        this.nama = nama;
         return this;
     }
 
-    public String getName() {
-        return this.name;
+    public String getNama() {
+        return this.nama;
     }
 
     public akun setEmail(String email) {
@@ -22,5 +24,14 @@ public class akun {
     public String getEmail() {
         return this.email;
     }
+
+    public akun setTerdaftar(boolean terdaftar) {
+        this.terdaftar = terdaftar;
+        return this;
+    }
+    public boolean isTerdaftar() {
+        return terdaftar;
+    }
+
 
 }

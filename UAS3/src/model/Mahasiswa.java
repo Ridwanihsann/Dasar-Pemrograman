@@ -1,40 +1,17 @@
 package model;
 
-public class Mahasiswa {
+public class Mahasiswa extends akun {
     private String idMahasiswa;
-    private String nama;
-    private String email;
-    private boolean terdaftar;
+    // private boolean terdaftar;
 
     public Mahasiswa setIdMahasiswa(String idMahasiswa) {
         this.idMahasiswa = idMahasiswa;
         return this;
     }
-    public Mahasiswa setNama(String nama) {
-        this.nama = nama;
-        return this;
-    }
-    public Mahasiswa setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public Mahasiswa setTerdaftar(boolean terdaftar) {
-        this.terdaftar = terdaftar;
-        return this;
-    }
-
-
+    
     public String getIdMahasiswa() {
         return idMahasiswa;
     }
-    public String getNama() {
-        return nama;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public boolean isTerdaftar() {
-        return terdaftar;
-    }
+    
 
 }
