@@ -38,6 +38,9 @@ public class App {
                     perpustakaanController.tampilkanLaporanPeminjaman();
                     break;
                 case "6" :
+                    perpustakaanController.tampilkanLaporanPengembalian();
+                    break;
+                case "7" :
                     System.out.println("\n=== Terima kasih! ===\n");
                     break;
                 default:
@@ -51,14 +54,15 @@ public class App {
 
     public static void tampilkanMenu() {
         System.out.println("\n+====================================+");
-        System.out.println("|       Silahkan pilih menu:         |");
+        System.out.println("|        Silahkan pilih menu:        |");
         System.out.println("|------------------------------------|");
         System.out.println("|1.| Tampilkan Daftar Buku           |");        
         System.out.println("|2.| Tampilkan Daftar Mahasiswa      |");   
         System.out.println("|3.| Pinjam Buku                     |");
         System.out.println("|4.| Kembalikan Buku                 |");
         System.out.println("|5.| Tampilkan Laporan Peminjaman    |");
-        System.out.println("|6.| Keluar                          |");
+        System.out.println("|6.| Tampilkan Laporan Pengembalian  |");
+        System.out.println("|7.| Keluar                          |");
         System.out.println("+====================================+");
     }
 

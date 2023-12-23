@@ -101,33 +101,6 @@ public class PerpustakaanController {
     }
 
 
-    public void tampilkanDaftarBukuTersedia() {
-        System.out.println("\n=== Daftar Buku Tersedia ===\n");
-        // Pengunalngan HasMap
-        for (Map.Entry<String, Buku> book : daftarBuku.entrySet()) {
-            Buku buku = book.getValue();
-            if (buku.isTersedia()) {
-                System.out.println("ID Buku\t\t: " + buku.getIdBuku());
-                System.out.println("Judul\t\t: " + buku.getJudul());
-                System.out.println("Pengarang\t: " + buku.getPengarang());
-                System.out.println("===============================");
-            }
-        }
-    }
-
-
-    public void tampilkanDaftarMahasiswa() {
-        System.out.println("\n=== Daftar Mahasiswa ===\n");
-        for (Entry<String, Mahasiswa> entry : daftarMahasiswa.entrySet()) {
-            Mahasiswa Mahasiswa = entry.getValue();
-            if (Mahasiswa.isTerdaftar()) {
-                System.out.println("NIM\t: " + Mahasiswa.getIdMahasiswa());
-                System.out.println("Nama\t: " + Mahasiswa.getNama());
-                System.out.println("Email\t: " + Mahasiswa.getEmail());
-                System.out.println("===============================");
-            }
-        }
-    }
 
 
     public void menuPinjamBuku() {
@@ -144,6 +117,7 @@ public class PerpustakaanController {
     }
 
 
+    
     public void menuKembalikanBuku() {
         Scanner input = new Scanner(System.in);
         System.out.print("\nMasukkan ID Peminjaman yang ingin dikembalikan: ");
@@ -186,15 +160,59 @@ public class PerpustakaanController {
     }
 
 
+    
+    public void tampilkanDaftarBukuTersedia() {
+        System.out.println("\n======== Daftar Buku Tersedia ========\n");
+        // Pengunalngan HasMap
+        for (Map.Entry<String, Buku> book : daftarBuku.entrySet()) {
+            Buku buku = book.getValue();
+            if (buku.isTersedia()) {
+                System.out.println("ID Buku\t\t: " + buku.getIdBuku());
+                System.out.println("Judul\t\t: " + buku.getJudul());
+                System.out.println("Pengarang\t: " + buku.getPengarang());
+                System.out.println("======================================");
+            }
+        }
+    }
+
+
+    public void tampilkanDaftarMahasiswa() {
+        System.out.println("\n======== Daftar Mahasiswa ========\n");
+        for (Entry<String, Mahasiswa> entry : daftarMahasiswa.entrySet()) {
+            Mahasiswa Mahasiswa = entry.getValue();
+            if (Mahasiswa.isTerdaftar()) {
+                System.out.println("NIM\t: " + Mahasiswa.getIdMahasiswa());
+                System.out.println("Nama\t: " + Mahasiswa.getNama());
+                System.out.println("Email\t: " + Mahasiswa.getEmail());
+                System.out.println("======================================");
+            }
+        }
+    }
+
+
     public void tampilkanLaporanPeminjaman() {
-        System.out.println("\n=== Laporan Peminjaman ===");
+        System.out.println("\n======== Laporan Peminjaman ========");
         for (Peminjaman peminjaman : daftarPeminjaman) {
             System.out.println("ID Peminjaman\t: " + peminjaman.getIdPeminjaman());
             System.out.println("Tanggal Pinjam\t: " + peminjaman.getTanggalPinjam());
             System.out.println("Buku\t\t: " + peminjaman.getBuku().getJudul());
             System.out.println("Nama\t\t: " + peminjaman.getMahasiswa().getNama());
-            System.out.println("=================================");
+                System.out.println("======================================");
         }
     }
+
+    public void tampilkanLaporanPengembalian() {
+        System.out.println("\n======== Laporan Pengembalian ========");
+        for (Peminjaman peminjaman : daftarPeminjaman) {
+            if (peminjaman.isSudahDikembalikan()) {
+                System.out.println("ID Peminjaman\t: " + peminjaman.getIdPeminjaman());
+                System.out.println("Tanggal Kembali\t: " + peminjaman.getTanggalKembali());
+                System.out.println("Buku\t\t: " + peminjaman.getBuku().getJudul());
+                System.out.println("Nama\t\t: " + peminjaman.getMahasiswa().getNama());
+                System.out.println("======================================");
+            }
+        }
+    }
+    
    
 }
