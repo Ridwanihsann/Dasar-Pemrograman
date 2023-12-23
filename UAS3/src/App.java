@@ -8,8 +8,10 @@ public class App {
 
 
     public static void main(String[] args) {
-        System.out.println("\n=========== SELAMAT DATANG ===========\n");
-        System.out.println("---- Perpustakaan Peminjaman Buku ----\n");
+        System.out.println("\n+====================================+");
+        System.out.println("|========== SELAMAT DATANG ==========|");
+        System.out.println("|--- Perpustakaan Peminjaman Buku ---|");
+        System.out.println("+====================================+\n");
 
         PerpustakaanController perpustakaanController = new PerpustakaanController();
         perpustakaanController.Data();
@@ -36,10 +38,10 @@ public class App {
                     perpustakaanController.tampilkanLaporanPeminjaman();
                     break;
                 case "6" :
-                    System.out.println("\n=== Terima kasih! ===");
+                    System.out.println("\n=== Terima kasih! ===\n");
                     break;
                 default:
-                    System.out.println("\n!!! Pilihan tidak valid. Masukan angka yang sesuai. !!!");
+                    System.out.println("\n!!! Pilihan tidak valid. Masukan angka yang sesuai. !!!\n");
                     break;
             }
         }
@@ -48,13 +50,16 @@ public class App {
 
 
     public static void tampilkanMenu() {
-        System.out.println("\nSilahkan pilih menu:\n");
-        System.out.println("1. Tampilkan Daftar Buku");
-        System.out.println("2. Tampilkan Daftar Mahasiswa");
-        System.out.println("3. Pinjam Buku");
-        System.out.println("4. Kembalikan Buku");
-        System.out.println("5. Tampilkan Laporan Peminjaman");
-        System.out.println("6. Keluar");
+        System.out.println("\n+====================================+");
+        System.out.println("|       Silahkan pilih menu:         |");
+        System.out.println("|------------------------------------|");
+        System.out.println("|1.| Tampilkan Daftar Buku           |");        
+        System.out.println("|2.| Tampilkan Daftar Mahasiswa      |");   
+        System.out.println("|3.| Pinjam Buku                     |");
+        System.out.println("|4.| Kembalikan Buku                 |");
+        System.out.println("|5.| Tampilkan Laporan Peminjaman    |");
+        System.out.println("|6.| Keluar                          |");
+        System.out.println("+====================================+");
     }
 
 

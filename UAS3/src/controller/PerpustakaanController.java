@@ -19,6 +19,7 @@ public class PerpustakaanController {
     private HashMap<String, Mahasiswa> daftarMahasiswa = new HashMap<>();
     private ArrayList<Peminjaman> daftarPeminjaman = new ArrayList<>();
 
+
     public void Data() {
         // Inisialisasi objek
         Buku buku1 = new Buku();
@@ -94,6 +95,7 @@ public class PerpustakaanController {
         return daftarBuku.get(idBuku);
     }
 
+
     public Mahasiswa getMahasiswa(String idMahasiswa) {
         return daftarMahasiswa.get(idMahasiswa);
     }
@@ -113,6 +115,7 @@ public class PerpustakaanController {
         }
     }
 
+
     public void tampilkanDaftarMahasiswa() {
         System.out.println("\n=== Daftar Mahasiswa ===\n");
         for (Entry<String, Mahasiswa> entry : daftarMahasiswa.entrySet()) {
@@ -125,6 +128,7 @@ public class PerpustakaanController {
             }
         }
     }
+
 
     public void menuPinjamBuku() {
         Scanner input = new Scanner(System.in);
@@ -139,6 +143,7 @@ public class PerpustakaanController {
 
     }
 
+
     public void menuKembalikanBuku() {
         Scanner input = new Scanner(System.in);
         System.out.print("\nMasukkan ID Peminjaman yang ingin dikembalikan: ");
@@ -146,6 +151,7 @@ public class PerpustakaanController {
 
         kembalikanBuku(idPeminjaman);
     }
+
 
     public void pinjamBuku( String idBuku, String idMahasiswa) {
         Buku buku = daftarBuku.get(idBuku);
@@ -161,7 +167,9 @@ public class PerpustakaanController {
             System.out.println("\n=== !!! Peminjaman gagal. Pastikan buku tersedia dan Mahasiswa terdaftar.!!! ===");
         }
        
+
     }
+
 
     public void kembalikanBuku(String idPeminjaman) {
         for (Peminjaman peminjaman : daftarPeminjaman) {
@@ -174,10 +182,12 @@ public class PerpustakaanController {
             }
         }
         System.out.println("\nPengembalian gagal. Pastikan ID peminjaman valid.");
+
     }
 
+
     public void tampilkanLaporanPeminjaman() {
-        System.out.println("=== Laporan Peminjaman ===");
+        System.out.println("\n=== Laporan Peminjaman ===");
         for (Peminjaman peminjaman : daftarPeminjaman) {
             System.out.println("ID Peminjaman\t: " + peminjaman.getIdPeminjaman());
             System.out.println("Tanggal Pinjam\t: " + peminjaman.getTanggalPinjam());
