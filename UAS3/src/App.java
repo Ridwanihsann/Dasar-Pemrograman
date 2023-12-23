@@ -15,9 +15,11 @@ public class App {
 
         PerpustakaanController perpustakaanController = new PerpustakaanController();
         perpustakaanController.Data();
+
+
         boolean lanjut = true;
         Scanner input = new Scanner(System.in);
-        while (lanjut) {
+        do {
             tampilkanMenu();
                 System.out.print("Masukkan pilihan Anda:");
                 String pilihan = input.nextLine();
@@ -40,14 +42,61 @@ public class App {
                 case "6" :
                     perpustakaanController.tampilkanLaporanPengembalian();
                     break;
-                case "7" :
+                default:
+                    lanjut = false;
                     System.out.println("\n=== Terima kasih! ===\n");
                     break;
-                default:
-                    System.out.println("\n!!! Pilihan tidak valid. Masukan angka yang sesuai. !!!\n");
-                    break;
             }
-        }
+        }while (lanjut);
+                
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // boolean lanjut = true;
+        // Scanner input = new Scanner(System.in);
+        // while (lanjut) {
+        //     tampilkanMenu();
+        //         System.out.print("Masukkan pilihan Anda:");
+        //         String pilihan = input.nextLine();
+        //     switch (pilihan) {
+        //         case "1":
+        //             perpustakaanController.tampilkanDaftarBukuTersedia();
+        //             break;
+        //         case "2" :
+        //             perpustakaanController.tampilkanDaftarMahasiswa();
+        //             break;
+        //         case "3":
+        //             perpustakaanController.menuPinjamBuku();
+        //             break;
+        //         case "4" :
+        //             perpustakaanController.menuKembalikanBuku();
+        //             break;
+        //         case "5" :
+        //             perpustakaanController.tampilkanLaporanPeminjaman();
+        //             break;
+        //         case "6" :
+        //             perpustakaanController.tampilkanLaporanPengembalian();
+        //             break;
+        //         case "7" :
+        //             System.out.println("\n=== Terima kasih! ===\n");
+        //             break;
+        //         default:
+        //             System.out.println("\n!!! Pilihan tidak valid. Masukan angka yang sesuai. !!!\n");
+        //             break;
+        //     }
+        // }
     }
 
 

@@ -1,3 +1,4 @@
+// AWAL BAGIAN 1=====
 package controller;
 
 import java.util.ArrayList;
@@ -100,9 +101,10 @@ public class PerpustakaanController {
         return daftarMahasiswa.get(idMahasiswa);
     }
 
+// AKHIR BAGIAN 1=====
 
 
-
+// AWAL BAGIAN 2=====
     public void menuPinjamBuku() {
         Scanner input = new Scanner(System.in);
         ArrayList<Peminjaman> daftarPeminjaman = new ArrayList<>();
@@ -158,9 +160,10 @@ public class PerpustakaanController {
         System.out.println("\nPengembalian gagal. Pastikan ID peminjaman valid.");
 
     }
+// AKHIR BAGIAN 2=====
 
+// AWAL BAGIAN 3=====
 
-    
     public void tampilkanDaftarBukuTersedia() {
         System.out.println("\n======== Daftar Buku Tersedia ========\n");
         // Pengunalngan HasMap
@@ -214,5 +217,5 @@ public class PerpustakaanController {
         }
     }
     
-   
+// AKHIR BAGIAN 3=====
 }
